@@ -33,4 +33,21 @@ class UserProfileTests: XCTestCase {
         }
     }
 
+    func testFetchUser() {
+        let expectation = XCTestExpectation(description: "testFetchUser")
+        
+        APIManager.shared.fetchUser(completion: { result in
+            switch result {
+            case .success(let user):
+                XCTAssert(user.userName == Constants.defaultUserName)
+                expectation.fulfill()
+            case .failure(let error):
+                print(error)
+                XCTFail()
+                expectation.fulfill()
+            }
+        })
+        
+        wait(for: [expectation], timeout: 10.0)
+    }
 }

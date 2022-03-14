@@ -32,9 +32,21 @@
 		8BFB258027DFADC2007CFE00 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFB257F27DFADC2007CFE00 /* CoreDataManager.swift */; };
 		8BFB258127DFADC2007CFE00 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFB257F27DFADC2007CFE00 /* CoreDataManager.swift */; };
 		8BFB258227DFADC2007CFE00 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFB257F27DFADC2007CFE00 /* CoreDataManager.swift */; };
-		8BFB258527DFAE6E007CFE00 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFB258427DFAE6E007CFE00 /* APIManager.swift */; };
-		8BFB258627DFAE6E007CFE00 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFB258427DFAE6E007CFE00 /* APIManager.swift */; };
-		8BFB258727DFAE6E007CFE00 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFB258427DFAE6E007CFE00 /* APIManager.swift */; };
+		8BFB258527DFAE6E007CFE00 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFB258427DFAE6E007CFE00 /* APIService.swift */; };
+		8BFB258627DFAE6E007CFE00 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFB258427DFAE6E007CFE00 /* APIService.swift */; };
+		8BFB258727DFAE6E007CFE00 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFB258427DFAE6E007CFE00 /* APIService.swift */; };
+		8BFB258927DFB41D007CFE00 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFB258827DFB41D007CFE00 /* Constants.swift */; };
+		8BFB258A27DFB41D007CFE00 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFB258827DFB41D007CFE00 /* Constants.swift */; };
+		8BFB258B27DFB41D007CFE00 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFB258827DFB41D007CFE00 /* Constants.swift */; };
+		8BFB258F27DFCF24007CFE00 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFB258E27DFCF24007CFE00 /* UserViewModel.swift */; };
+		8BFB259027DFCF24007CFE00 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFB258E27DFCF24007CFE00 /* UserViewModel.swift */; };
+		8BFB259127DFCF24007CFE00 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFB258E27DFCF24007CFE00 /* UserViewModel.swift */; };
+		8BFB259327DFCF9E007CFE00 /* UserAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFB259227DFCF9E007CFE00 /* UserAPIService.swift */; };
+		8BFB259427DFCF9E007CFE00 /* UserAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFB259227DFCF9E007CFE00 /* UserAPIService.swift */; };
+		8BFB259527DFCF9E007CFE00 /* UserAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFB259227DFCF9E007CFE00 /* UserAPIService.swift */; };
+		8BFB259727DFD14C007CFE00 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFB259627DFD14C007CFE00 /* UserViewController.swift */; };
+		8BFB259827DFD14C007CFE00 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFB259627DFD14C007CFE00 /* UserViewController.swift */; };
+		8BFB259927DFD14C007CFE00 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFB259627DFD14C007CFE00 /* UserViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,7 +86,11 @@
 		8BFB257127DFAD7B007CFE00 /* UPPurchase+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UPPurchase+CoreDataClass.swift"; sourceTree = "<group>"; };
 		8BFB257227DFAD7B007CFE00 /* UPPurchase+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UPPurchase+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8BFB257F27DFADC2007CFE00 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
-		8BFB258427DFAE6E007CFE00 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		8BFB258427DFAE6E007CFE00 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		8BFB258827DFB41D007CFE00 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8BFB258E27DFCF24007CFE00 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		8BFB259227DFCF9E007CFE00 /* UserAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPIService.swift; sourceTree = "<group>"; };
+		8BFB259627DFD14C007CFE00 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,9 +141,10 @@
 		8BFB253927DFA057007CFE00 /* UserProfile */ = {
 			isa = PBXGroup;
 			children = (
+				8BFB258C27DFCE43007CFE00 /* User */,
+				8BFB258D27DFCE4C007CFE00 /* Purchases */,
 				8BFB258327DFAE5C007CFE00 /* Helpers */,
 				8BFB256E27DFA716007CFE00 /* Core Data */,
-				8BFB256D27DFA6FB007CFE00 /* Model */,
 				8BFB253A27DFA057007CFE00 /* AppDelegate.swift */,
 				8BFB253C27DFA057007CFE00 /* SceneDelegate.swift */,
 				8BFB253E27DFA057007CFE00 /* ViewController.swift */,
@@ -156,13 +173,6 @@
 			path = UserProfileUITests;
 			sourceTree = "<group>";
 		};
-		8BFB256D27DFA6FB007CFE00 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		8BFB256E27DFA716007CFE00 /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,9 +189,27 @@
 		8BFB258327DFAE5C007CFE00 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				8BFB258427DFAE6E007CFE00 /* APIManager.swift */,
+				8BFB258427DFAE6E007CFE00 /* APIService.swift */,
+				8BFB258827DFB41D007CFE00 /* Constants.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		8BFB258C27DFCE43007CFE00 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				8BFB258E27DFCF24007CFE00 /* UserViewModel.swift */,
+				8BFB259227DFCF9E007CFE00 /* UserAPIService.swift */,
+				8BFB259627DFD14C007CFE00 /* UserViewController.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		8BFB258D27DFCE4C007CFE00 /* Purchases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Purchases;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,9 +344,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BFB254527DFA057007CFE00 /* UserProfile.xcdatamodeld in Sources */,
+				8BFB258F27DFCF24007CFE00 /* UserViewModel.swift in Sources */,
+				8BFB258927DFB41D007CFE00 /* Constants.swift in Sources */,
 				8BFB257C27DFAD7B007CFE00 /* UPPurchase+CoreDataProperties.swift in Sources */,
-				8BFB258527DFAE6E007CFE00 /* APIManager.swift in Sources */,
+				8BFB258527DFAE6E007CFE00 /* APIService.swift in Sources */,
 				8BFB257927DFAD7B007CFE00 /* UPPurchase+CoreDataClass.swift in Sources */,
+				8BFB259327DFCF9E007CFE00 /* UserAPIService.swift in Sources */,
+				8BFB259727DFD14C007CFE00 /* UserViewController.swift in Sources */,
 				8BFB253F27DFA057007CFE00 /* ViewController.swift in Sources */,
 				8BFB253B27DFA057007CFE00 /* AppDelegate.swift in Sources */,
 				8BFB257327DFAD7B007CFE00 /* UPUser+CoreDataClass.swift in Sources */,
@@ -335,10 +367,14 @@
 				8BFB258127DFADC2007CFE00 /* CoreDataManager.swift in Sources */,
 				8BFB255527DFA058007CFE00 /* UserProfileTests.swift in Sources */,
 				8BFB257D27DFAD7B007CFE00 /* UPPurchase+CoreDataProperties.swift in Sources */,
+				8BFB259827DFD14C007CFE00 /* UserViewController.swift in Sources */,
 				8BFB257A27DFAD7B007CFE00 /* UPPurchase+CoreDataClass.swift in Sources */,
 				8BFB257427DFAD7B007CFE00 /* UPUser+CoreDataClass.swift in Sources */,
 				8BFB257727DFAD7B007CFE00 /* UPUser+CoreDataProperties.swift in Sources */,
-				8BFB258627DFAE6E007CFE00 /* APIManager.swift in Sources */,
+				8BFB258627DFAE6E007CFE00 /* APIService.swift in Sources */,
+				8BFB259027DFCF24007CFE00 /* UserViewModel.swift in Sources */,
+				8BFB258A27DFB41D007CFE00 /* Constants.swift in Sources */,
+				8BFB259427DFCF9E007CFE00 /* UserAPIService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,14 +382,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BFB258727DFAE6E007CFE00 /* APIManager.swift in Sources */,
+				8BFB258727DFAE6E007CFE00 /* APIService.swift in Sources */,
+				8BFB259927DFD14C007CFE00 /* UserViewController.swift in Sources */,
 				8BFB255F27DFA058007CFE00 /* UserProfileUITests.swift in Sources */,
 				8BFB257E27DFAD7B007CFE00 /* UPPurchase+CoreDataProperties.swift in Sources */,
+				8BFB259127DFCF24007CFE00 /* UserViewModel.swift in Sources */,
 				8BFB257827DFAD7B007CFE00 /* UPUser+CoreDataProperties.swift in Sources */,
+				8BFB259527DFCF9E007CFE00 /* UserAPIService.swift in Sources */,
 				8BFB256127DFA058007CFE00 /* UserProfileUITestsLaunchTests.swift in Sources */,
 				8BFB257527DFAD7B007CFE00 /* UPUser+CoreDataClass.swift in Sources */,
 				8BFB258227DFADC2007CFE00 /* CoreDataManager.swift in Sources */,
 				8BFB257B27DFAD7B007CFE00 /* UPPurchase+CoreDataClass.swift in Sources */,
+				8BFB258B27DFB41D007CFE00 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

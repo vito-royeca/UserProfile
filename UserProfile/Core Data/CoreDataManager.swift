@@ -25,6 +25,12 @@ class CoreDataManager {
          error conditions that could cause the creation of the store to fail.
         */
         let container = NSPersistentContainer(name: "UserProfile")
+        
+        // TODO: Comment out if running unit tests
+//        let description = NSPersistentStoreDescription()
+//        description.url = URL(fileURLWithPath: "/dev/null")
+//        self.persistentContainer.persistentStoreDescriptions = [description]
+        
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.
@@ -44,9 +50,61 @@ class CoreDataManager {
         return container
     }()
 
+    // MARK: - Methods
+    func find<T: NSManagedObject>(_ entity: T.Type,
+                                  properties: [String: Any]?,
+                                  predicate: NSPredicate?,
+                                  sortDescriptors: [NSSortDescriptor]?,
+                                  createIfNotFound: Bool) -> [T]? {
+        
+        let context = persistentContainer.viewContext
+        let entityName = String(describing: entity)
+        
+        let request = NSFetchRequest<T>(entityName: entityName)
+        request.predicate = predicate
+        request.sortDescriptors = sortDescriptors
+        
+        do {
+            let objects = try context.fetch(request)
+            
+            if !objects.isEmpty {
+                objects.forEach {
+                    for (key,value) in properties ?? [:] {
+                        $0.setValue(value, forKey: key)
+                    }
+                }
+                return objects
+            } else {
+                if createIfNotFound {
+                    if let desc = NSEntityDescription.entity(forEntityName: entityName, in: context) {
+                        let object = NSManagedObject(entity: desc, insertInto: context)
+                        
+                        for (key,value) in properties ?? [:] {
+                            object.setValue(value, forKey: key)
+                        }
+                        
+                        saveContext()
+                        return find(entity,
+                                    properties: properties,
+                                    predicate: predicate,
+                                    sortDescriptors: sortDescriptors,
+                                    createIfNotFound: createIfNotFound)
+                    } else {
+                        return nil
+                    }
+                } else {
+                    return nil
+                }
+            }
+        } catch {
+            print("%@", error.localizedDescription)
+            return nil
+        }
+    }
+    
     // MARK: - Core Data Saving support
 
-    func saveContext () {
+    func saveContext() {
         let context = persistentContainer.viewContext
         if context.hasChanges {
             do {
