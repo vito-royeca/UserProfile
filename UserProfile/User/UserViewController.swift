@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class UserViewController: UIViewController {
     
@@ -56,9 +57,14 @@ class UserViewController: UIViewController {
     
     func updateDataSource() {
         DispatchQueue.main.async {
+            if let urlString = self.viewModel.user.image,
+               let url = URL(string: urlString) {
+                self.userImage.sd_setImage(with: url,
+                                           placeholderImage: nil)
+            }
             self.nameValue.text = self.viewModel.user.name
             self.userNameValue.text = self.viewModel.user.userName
-            self.fullNameValue.text = self.viewModel.user.fullName
+            self.fullNameValue.text = "\(self.viewModel.user.fullName!) \(self.viewModel.user.fullName!) \(self.viewModel.user.fullName!)"
             self.phoneNumberValue.text = self.viewModel.user.phoneNumber
             self.registrationDateValue.text = "\(self.viewModel.user.registrationFormatted ?? "")"
             self.activityIndicatorView.stopAnimating()
