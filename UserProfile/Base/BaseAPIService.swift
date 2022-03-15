@@ -1,5 +1,5 @@
 //
-//  APIService.swift
+//  BaseAPIService.swift
 //  UserProfile
 //
 //  Created by Vito Royeca on 3/14/22.
@@ -8,10 +8,14 @@
 import Combine
 import CoreData
 
-class APIService {
+class BaseAPIService {
     private var cancellable: AnyCancellable?
     
-    func fetchRemoteData<T: NSManagedObject>(type: T.Type, urlString: String, completion: @escaping (Result<Void, Error>) -> Void) {
+    func fetchLocalData<T: NSManagedObject>(completion: @escaping (Result<[T], Error>) -> Void) {
+        
+    }
+    
+    func fetchRemoteData<T: Codable>(type: T.Type, urlString: String, completion: @escaping (Result<Void, Error>) -> Void) {
         guard let url = URL(string: urlString) else {
             completion(.failure(UPError.urlFormat))
             return
@@ -33,7 +37,7 @@ class APIService {
             
             return output.data
         }
-        .decode(type: UPUser.self, decoder: decoder)
+        .decode(type: type, decoder: decoder)
         .eraseToAnyPublisher()
         .sink(receiveCompletion: { (subscriberCompletion) in
             switch subscriberCompletion {

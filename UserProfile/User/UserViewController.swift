@@ -49,7 +49,7 @@ class UserViewController: UIViewController {
     }
     
     func viewModelForUIUpdate() {
-        self.viewModel =  UserViewModel()
+        self.viewModel =  UserViewModel(service: UserAPIService())
         self.viewModel.bindViewModelToController = {
             self.updateDataSource()
         }

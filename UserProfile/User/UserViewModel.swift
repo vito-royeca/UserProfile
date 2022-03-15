@@ -5,33 +5,25 @@
 //  Created by Vito Royeca on 3/14/22.
 //
 
-import Foundation
+import CoreData
 
-class UserViewModel : NSObject {
-    
-    private var apiService : UserAPIService!
+class UserViewModel : BaseViewModel {
     private(set) var user : UPUser! {
         didSet {
             self.bindViewModelToController()
         }
     }
     
-    var bindViewModelToController : (() -> ()) = {}
-    
-    override init() {
-        super.init()
-        self.apiService =  UserAPIService()
-//        fetchData()
-    }
-    
-    func fetchData() {
-        self.apiService.fetchUser(completion: { result in
-            switch result {
-            case .success(let user):
+    override func handle<T: NSManagedObject>(result: Result<[T], Error>) {
+        switch result {
+        case .success(let data):
+            if let user = data.first as? UPUser {
                 self.user = user
-            case .failure(let error):
-                print(error)
+            } else {
+                
             }
-        })
+        case .failure(let error):
+            print(error)
+        }
     }
 }

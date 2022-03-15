@@ -5,11 +5,11 @@
 //  Created by Vito Royeca on 3/14/22.
 //
 
-import Foundation
+import CoreData
 
-class UserAPIService: APIService {
+class UserAPIService: BaseAPIService {
 
-    func fetchUser(completion: @escaping (Result<UPUser, Error>) -> Void) {
+    override func fetchLocalData<T: NSManagedObject>(completion: @escaping (Result<[T], Error>) -> Void) {
         let predicate = NSPredicate(format: "userName = %@", Constants.defaultUserName)
 
         if let user = CoreDataManager.shared.find(UPUser.self,
@@ -23,7 +23,7 @@ class UserAPIService: APIService {
                                                          to: Date()).minute,
            diff <= Constants.syncThresholdMinutes {
             
-            completion(.success(user))
+            completion(.success([user as! T]))
             
         } else {
             let urlString = "https://idme-takehome.proxy.beeceptor.com/profile/U13023932"
@@ -37,7 +37,7 @@ class UserAPIService: APIService {
                                                               sortDescriptors: nil,
                                                               createIfNotFound: false)?.first {
                         
-                        completion(.success(user))
+                        completion(.success([user as! T]))
                     } else {
                         completion(.failure(UPError.dataNotFound))
                     }
