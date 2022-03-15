@@ -64,7 +64,7 @@ class UserViewController: UIViewController {
             }
             self.nameValue.text = self.viewModel.user.name
             self.userNameValue.text = self.viewModel.user.userName
-            self.fullNameValue.text = "\(self.viewModel.user.fullName!) \(self.viewModel.user.fullName!) \(self.viewModel.user.fullName!)"
+            self.fullNameValue.text = self.viewModel.user.fullName
             self.phoneNumberValue.text = self.viewModel.user.phoneNumber
             self.registrationDateValue.text = "\(self.viewModel.user.registrationFormatted ?? "")"
             self.activityIndicatorView.stopAnimating()
