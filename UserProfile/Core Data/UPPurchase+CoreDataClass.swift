@@ -33,7 +33,7 @@ public class UPPurchase: NSManagedObject, Codable {
         self.image = try container.decode(String.self, forKey: .image)
         self.purchaseDate = try container.decode(Date.self, forKey: .purchaseDate)
         self.itemName = try container.decode(String.self, forKey: .itemName)
-        self.price = try container.decode(Double.self, forKey: .price)
+        self.price = try Double(container.decode(String.self, forKey: .price)) ?? 0
         self.serial = try container.decode(String.self, forKey: .serial)
         self.productDescription = try container.decode(String.self, forKey: .productDescription)
         self.lastUpdate = Date()
@@ -50,5 +50,23 @@ public class UPPurchase: NSManagedObject, Codable {
         try container.encode(serial, forKey: .serial)
         try container.encode(productDescription, forKey: .productDescription)
         try container.encode(user, forKey: .user)
+    }
+}
+
+// MARK: - Formats
+extension UPPurchase {
+    var priceFormatted: String {
+        return String(format: "$%.02f", price)
+    }
+    
+    var purchaseDateFormatted: String? {
+        guard let purchaseDate = purchaseDate else {
+            return nil
+        }
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMMM d, yyyy"
+        
+        return formatter.string(from: purchaseDate)
     }
 }

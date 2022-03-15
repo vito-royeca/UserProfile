@@ -10,6 +10,21 @@
 		8B5D960927E043CA002E95C0 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5D960827E043CA002E95C0 /* BaseViewModel.swift */; };
 		8B5D960A27E043CA002E95C0 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5D960827E043CA002E95C0 /* BaseViewModel.swift */; };
 		8B5D960B27E043CA002E95C0 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5D960827E043CA002E95C0 /* BaseViewModel.swift */; };
+		8B6E99A627E10256002794D6 /* PurchasesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E99A527E10256002794D6 /* PurchasesViewModel.swift */; };
+		8B6E99A727E10256002794D6 /* PurchasesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E99A527E10256002794D6 /* PurchasesViewModel.swift */; };
+		8B6E99A827E10256002794D6 /* PurchasesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E99A527E10256002794D6 /* PurchasesViewModel.swift */; };
+		8B6E99AA27E10268002794D6 /* PurchasesAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E99A927E10268002794D6 /* PurchasesAPIService.swift */; };
+		8B6E99AB27E10268002794D6 /* PurchasesAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E99A927E10268002794D6 /* PurchasesAPIService.swift */; };
+		8B6E99AC27E10268002794D6 /* PurchasesAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E99A927E10268002794D6 /* PurchasesAPIService.swift */; };
+		8B6E99AE27E1027D002794D6 /* PurchasesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E99AD27E1027D002794D6 /* PurchasesViewController.swift */; };
+		8B6E99AF27E1027D002794D6 /* PurchasesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E99AD27E1027D002794D6 /* PurchasesViewController.swift */; };
+		8B6E99B027E1027D002794D6 /* PurchasesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E99AD27E1027D002794D6 /* PurchasesViewController.swift */; };
+		8B6E99B227E1163E002794D6 /* PurchasesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E99B127E1163E002794D6 /* PurchasesDataSource.swift */; };
+		8B6E99B327E1163E002794D6 /* PurchasesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E99B127E1163E002794D6 /* PurchasesDataSource.swift */; };
+		8B6E99B427E1163E002794D6 /* PurchasesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E99B127E1163E002794D6 /* PurchasesDataSource.swift */; };
+		8B6E99B627E12233002794D6 /* PurchaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E99B527E12233002794D6 /* PurchaseTableViewCell.swift */; };
+		8B6E99B727E12233002794D6 /* PurchaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E99B527E12233002794D6 /* PurchaseTableViewCell.swift */; };
+		8B6E99B827E12233002794D6 /* PurchaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E99B527E12233002794D6 /* PurchaseTableViewCell.swift */; };
 		8BCDE39627E01EA600C15F59 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 8BCDE39527E01EA600C15F59 /* SDWebImage */; };
 		8BFB253B27DFA057007CFE00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFB253A27DFA057007CFE00 /* AppDelegate.swift */; };
 		8BFB253D27DFA057007CFE00 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFB253C27DFA057007CFE00 /* SceneDelegate.swift */; };
@@ -70,6 +85,11 @@
 
 /* Begin PBXFileReference section */
 		8B5D960827E043CA002E95C0 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		8B6E99A527E10256002794D6 /* PurchasesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasesViewModel.swift; sourceTree = "<group>"; };
+		8B6E99A927E10268002794D6 /* PurchasesAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasesAPIService.swift; sourceTree = "<group>"; };
+		8B6E99AD27E1027D002794D6 /* PurchasesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasesViewController.swift; sourceTree = "<group>"; };
+		8B6E99B127E1163E002794D6 /* PurchasesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasesDataSource.swift; sourceTree = "<group>"; };
+		8B6E99B527E12233002794D6 /* PurchaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseTableViewCell.swift; sourceTree = "<group>"; };
 		8BFB253727DFA057007CFE00 /* UserProfile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UserProfile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BFB253A27DFA057007CFE00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8BFB253C27DFA057007CFE00 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -145,9 +165,9 @@
 		8BFB253927DFA057007CFE00 /* UserProfile */ = {
 			isa = PBXGroup;
 			children = (
+				8BFB258327DFAE5C007CFE00 /* Base */,
 				8BFB258C27DFCE43007CFE00 /* User */,
 				8BFB258D27DFCE4C007CFE00 /* Purchases */,
-				8BFB258327DFAE5C007CFE00 /* Base */,
 				8BFB256E27DFA716007CFE00 /* Core Data */,
 				8BFB253A27DFA057007CFE00 /* AppDelegate.swift */,
 				8BFB258827DFB41D007CFE00 /* Constants.swift */,
@@ -203,8 +223,8 @@
 		8BFB258C27DFCE43007CFE00 /* User */ = {
 			isa = PBXGroup;
 			children = (
-				8BFB258E27DFCF24007CFE00 /* UserViewModel.swift */,
 				8BFB259227DFCF9E007CFE00 /* UserAPIService.swift */,
+				8BFB258E27DFCF24007CFE00 /* UserViewModel.swift */,
 				8BFB259627DFD14C007CFE00 /* UserViewController.swift */,
 			);
 			path = User;
@@ -213,6 +233,11 @@
 		8BFB258D27DFCE4C007CFE00 /* Purchases */ = {
 			isa = PBXGroup;
 			children = (
+				8B6E99A927E10268002794D6 /* PurchasesAPIService.swift */,
+				8B6E99A527E10256002794D6 /* PurchasesViewModel.swift */,
+				8B6E99AD27E1027D002794D6 /* PurchasesViewController.swift */,
+				8B6E99B127E1163E002794D6 /* PurchasesDataSource.swift */,
+				8B6E99B527E12233002794D6 /* PurchaseTableViewCell.swift */,
 			);
 			path = Purchases;
 			sourceTree = "<group>";
@@ -357,16 +382,21 @@
 				8BFB254527DFA057007CFE00 /* UserProfile.xcdatamodeld in Sources */,
 				8BFB258F27DFCF24007CFE00 /* UserViewModel.swift in Sources */,
 				8BFB258927DFB41D007CFE00 /* Constants.swift in Sources */,
+				8B6E99B227E1163E002794D6 /* PurchasesDataSource.swift in Sources */,
+				8B6E99B627E12233002794D6 /* PurchaseTableViewCell.swift in Sources */,
 				8BFB257C27DFAD7B007CFE00 /* UPPurchase+CoreDataProperties.swift in Sources */,
 				8BFB258527DFAE6E007CFE00 /* BaseAPIService.swift in Sources */,
 				8BFB257927DFAD7B007CFE00 /* UPPurchase+CoreDataClass.swift in Sources */,
 				8BFB259327DFCF9E007CFE00 /* UserAPIService.swift in Sources */,
 				8BFB259727DFD14C007CFE00 /* UserViewController.swift in Sources */,
 				8BFB253F27DFA057007CFE00 /* ViewController.swift in Sources */,
+				8B6E99AE27E1027D002794D6 /* PurchasesViewController.swift in Sources */,
 				8BFB253B27DFA057007CFE00 /* AppDelegate.swift in Sources */,
 				8BFB257327DFAD7B007CFE00 /* UPUser+CoreDataClass.swift in Sources */,
 				8B5D960927E043CA002E95C0 /* BaseViewModel.swift in Sources */,
 				8BFB258027DFADC2007CFE00 /* CoreDataManager.swift in Sources */,
+				8B6E99A627E10256002794D6 /* PurchasesViewModel.swift in Sources */,
+				8B6E99AA27E10268002794D6 /* PurchasesAPIService.swift in Sources */,
 				8BFB253D27DFA057007CFE00 /* SceneDelegate.swift in Sources */,
 				8BFB257627DFAD7B007CFE00 /* UPUser+CoreDataProperties.swift in Sources */,
 			);
@@ -378,13 +408,18 @@
 			files = (
 				8BFB258127DFADC2007CFE00 /* CoreDataManager.swift in Sources */,
 				8B5D960A27E043CA002E95C0 /* BaseViewModel.swift in Sources */,
+				8B6E99B327E1163E002794D6 /* PurchasesDataSource.swift in Sources */,
 				8BFB255527DFA058007CFE00 /* UserProfileTests.swift in Sources */,
+				8B6E99B727E12233002794D6 /* PurchaseTableViewCell.swift in Sources */,
+				8B6E99AB27E10268002794D6 /* PurchasesAPIService.swift in Sources */,
 				8BFB257D27DFAD7B007CFE00 /* UPPurchase+CoreDataProperties.swift in Sources */,
 				8BFB259827DFD14C007CFE00 /* UserViewController.swift in Sources */,
 				8BFB257A27DFAD7B007CFE00 /* UPPurchase+CoreDataClass.swift in Sources */,
 				8BFB257427DFAD7B007CFE00 /* UPUser+CoreDataClass.swift in Sources */,
 				8BFB257727DFAD7B007CFE00 /* UPUser+CoreDataProperties.swift in Sources */,
 				8BFB258627DFAE6E007CFE00 /* BaseAPIService.swift in Sources */,
+				8B6E99A727E10256002794D6 /* PurchasesViewModel.swift in Sources */,
+				8B6E99AF27E1027D002794D6 /* PurchasesViewController.swift in Sources */,
 				8BFB259027DFCF24007CFE00 /* UserViewModel.swift in Sources */,
 				8BFB259427DFCF9E007CFE00 /* UserAPIService.swift in Sources */,
 			);
@@ -396,14 +431,19 @@
 			files = (
 				8BFB258727DFAE6E007CFE00 /* BaseAPIService.swift in Sources */,
 				8BFB259927DFD14C007CFE00 /* UserViewController.swift in Sources */,
+				8B6E99A827E10256002794D6 /* PurchasesViewModel.swift in Sources */,
 				8BFB255F27DFA058007CFE00 /* UserProfileUITests.swift in Sources */,
 				8BFB257E27DFAD7B007CFE00 /* UPPurchase+CoreDataProperties.swift in Sources */,
+				8B6E99B827E12233002794D6 /* PurchaseTableViewCell.swift in Sources */,
 				8BFB259127DFCF24007CFE00 /* UserViewModel.swift in Sources */,
 				8B5D960B27E043CA002E95C0 /* BaseViewModel.swift in Sources */,
 				8BFB257827DFAD7B007CFE00 /* UPUser+CoreDataProperties.swift in Sources */,
 				8BFB259527DFCF9E007CFE00 /* UserAPIService.swift in Sources */,
 				8BFB256127DFA058007CFE00 /* UserProfileUITestsLaunchTests.swift in Sources */,
 				8BFB257527DFAD7B007CFE00 /* UPUser+CoreDataClass.swift in Sources */,
+				8B6E99AC27E10268002794D6 /* PurchasesAPIService.swift in Sources */,
+				8B6E99B027E1027D002794D6 /* PurchasesViewController.swift in Sources */,
+				8B6E99B427E1163E002794D6 /* PurchasesDataSource.swift in Sources */,
 				8BFB258227DFADC2007CFE00 /* CoreDataManager.swift in Sources */,
 				8BFB257B27DFAD7B007CFE00 /* UPPurchase+CoreDataClass.swift in Sources */,
 			);

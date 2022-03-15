@@ -10,6 +10,7 @@ import SDWebImage
 
 class UserViewController: UIViewController {
     
+    // MARK: - Outlets
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var nameValue: UILabel!
     @IBOutlet weak var personaLabel: UILabel!
@@ -23,11 +24,10 @@ class UserViewController: UIViewController {
     @IBOutlet weak var registrationDateValue: UILabel!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     
+    // MARK: - Variables
     private var viewModel : UserViewModel!
     
-//    private var dataSource : EmployeeTableViewDataSource<EmployeeTableViewCell,EmployeeData>!
-    
-
+    // MARK: - Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -45,7 +45,7 @@ class UserViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        viewModel.fetchData()
+        viewModel.fetchData(type: UPUser.self)
     }
     
     func viewModelForUIUpdate() {
@@ -69,16 +69,6 @@ class UserViewController: UIViewController {
             self.registrationDateValue.text = "\(self.viewModel.user.registrationFormatted ?? "")"
             self.activityIndicatorView.stopAnimating()
         }
-        
-//        self.dataSource = EmployeeTableViewDataSource(cellIdentifier: "EmployeeTableViewCell", items: self.employeeViewModel.empData.data, configureCell: { (cell, evm) in
-//            cell.employeeIdLabel.text = evm.id
-//            cell.employeeNameLabel.text = evm.employeeName
-//        })
-//
-//        DispatchQueue.main.async {
-//            self.employeeTableView.dataSource = self.dataSource
-//            self.employeeTableView.reloadData()
-//        }
     }
     
 }

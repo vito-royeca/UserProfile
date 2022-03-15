@@ -1,14 +1,14 @@
 //
-//  UserViewModel.swift
+//  PurchasesViewModel.swift
 //  UserProfile
 //
-//  Created by Vito Royeca on 3/14/22.
+//  Created by Vito Royeca on 3/15/22.
 //
 
 import CoreData
 
-class UserViewModel : BaseViewModel {
-    private(set) var user: UPUser! {
+class PurchasesViewModel : BaseViewModel {
+    private(set) var purchases: [UPPurchase]! {
         didSet {
             self.bindViewModelToController()
         }
@@ -17,10 +17,10 @@ class UserViewModel : BaseViewModel {
     override func handle<T: NSManagedObject>(result: Result<[T], Error>) {
         switch result {
         case .success(let data):
-            if let user = data.first as? UPUser {
-                self.user = user
+            if let purchases = data as? [UPPurchase] {
+                self.purchases = purchases
             } else {
-                
+
             }
         case .failure(let error):
             print(error)

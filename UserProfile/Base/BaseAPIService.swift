@@ -11,8 +11,8 @@ import CoreData
 class BaseAPIService {
     private var cancellable: AnyCancellable?
     
-    func fetchLocalData<T: NSManagedObject>(completion: @escaping (Result<[T], Error>) -> Void) {
-        
+    func fetchLocalData<T: NSManagedObject>(type: T.Type, completion: @escaping (Result<[T], Error>) -> Void) {
+        // subclass implementation
     }
     
     func fetchRemoteData<T: Codable>(type: T.Type, urlString: String, completion: @escaping (Result<Void, Error>) -> Void) {

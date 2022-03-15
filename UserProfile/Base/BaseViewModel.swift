@@ -9,7 +9,7 @@ import CoreData
 
 class BaseViewModel : NSObject {
     
-    var service : BaseAPIService!
+    private var service : BaseAPIService!
     var bindViewModelToController : (() -> ()) = {}
     
     init(service: BaseAPIService) {
@@ -17,13 +17,13 @@ class BaseViewModel : NSObject {
         self.service = service
     }
     
-    func fetchData() {
-        service.fetchLocalData(completion: { result in
+    func fetchData<T: NSManagedObject>(type: T.Type) {
+        service.fetchLocalData(type: type, completion: { result in
             self.handle(result: result)
         })
     }
     
     func handle<T: NSManagedObject>(result: Result<[T], Error>) {
-        
+        // subclass implementation
     }
 }

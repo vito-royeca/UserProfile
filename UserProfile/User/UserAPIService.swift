@@ -9,21 +9,22 @@ import CoreData
 
 class UserAPIService: BaseAPIService {
 
-    override func fetchLocalData<T: NSManagedObject>(completion: @escaping (Result<[T], Error>) -> Void) {
+    override func fetchLocalData<T: NSManagedObject>(type: T.Type, completion: @escaping (Result<[T], Error>) -> Void) {
         let predicate = NSPredicate(format: "userName = %@", Constants.defaultUserName)
 
-        if let user = CoreDataManager.shared.find(UPUser.self,
+        if let users = CoreDataManager.shared.find(type,
                                                   properties: nil,
                                                   predicate: predicate,
                                                   sortDescriptors: nil,
-                                                  createIfNotFound: false)?.first,
+                                                  createIfNotFound: false),
+           let user = users.first as? UPUser,
            let lastUpdate = user.lastUpdate,
            let diff = Calendar.current.dateComponents([.minute],
                                                          from: lastUpdate,
                                                          to: Date()).minute,
            diff <= Constants.syncThresholdMinutes {
             
-            completion(.success([user as! T]))
+            completion(.success(users))
             
         } else {
             let urlString = "https://idme-takehome.proxy.beeceptor.com/profile/U13023932"
@@ -31,13 +32,13 @@ class UserAPIService: BaseAPIService {
             fetchRemoteData(type: UPUser.self, urlString: urlString, completion: { result in
                 switch result {
                 case .success:
-                    if let user = CoreDataManager.shared.find(UPUser.self,
-                                                              properties: ["lastUpdate": Date()],
-                                                              predicate: predicate,
-                                                              sortDescriptors: nil,
-                                                              createIfNotFound: false)?.first {
+                    if let users = CoreDataManager.shared.find(type,
+                                                               properties: ["lastUpdate": Date()],
+                                                               predicate: predicate,
+                                                               sortDescriptors: nil,
+                                                               createIfNotFound: false) {
                         
-                        completion(.success([user as! T]))
+                        completion(.success(users))
                     } else {
                         completion(.failure(UPError.dataNotFound))
                     }
