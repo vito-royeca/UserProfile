@@ -28,6 +28,7 @@
 		8B6E99BA27E13203002794D6 /* AboutPurchasesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E99B927E13203002794D6 /* AboutPurchasesViewController.swift */; };
 		8B6E99BB27E13203002794D6 /* AboutPurchasesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E99B927E13203002794D6 /* AboutPurchasesViewController.swift */; };
 		8B6E99BC27E13203002794D6 /* AboutPurchasesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E99B927E13203002794D6 /* AboutPurchasesViewController.swift */; };
+		8B6E99BF27E1546A002794D6 /* String+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E99BE27E1546A002794D6 /* String+Utilities.swift */; };
 		8BCDE39627E01EA600C15F59 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 8BCDE39527E01EA600C15F59 /* SDWebImage */; };
 		8BFB253B27DFA057007CFE00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFB253A27DFA057007CFE00 /* AppDelegate.swift */; };
 		8BFB253D27DFA057007CFE00 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFB253C27DFA057007CFE00 /* SceneDelegate.swift */; };
@@ -94,6 +95,7 @@
 		8B6E99B127E1163E002794D6 /* PurchasesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasesDataSource.swift; sourceTree = "<group>"; };
 		8B6E99B527E12233002794D6 /* PurchaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseTableViewCell.swift; sourceTree = "<group>"; };
 		8B6E99B927E13203002794D6 /* AboutPurchasesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutPurchasesViewController.swift; sourceTree = "<group>"; };
+		8B6E99BE27E1546A002794D6 /* String+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Utilities.swift"; sourceTree = "<group>"; };
 		8BFB253727DFA057007CFE00 /* UserProfile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UserProfile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BFB253A27DFA057007CFE00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8BFB253C27DFA057007CFE00 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -146,6 +148,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8B6E99BD27E15454002794D6 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8B6E99BE27E1546A002794D6 /* String+Utilities.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		8BFB252E27DFA057007CFE00 = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				8BFB258327DFAE5C007CFE00 /* Base */,
+				8B6E99BD27E15454002794D6 /* Helpers */,
 				8BFB258C27DFCE43007CFE00 /* User */,
 				8BFB258D27DFCE4C007CFE00 /* Purchases */,
 				8BFB256E27DFA716007CFE00 /* Core Data */,
@@ -389,6 +400,7 @@
 				8BFB258927DFB41D007CFE00 /* Constants.swift in Sources */,
 				8B6E99B227E1163E002794D6 /* PurchasesDataSource.swift in Sources */,
 				8B6E99B627E12233002794D6 /* PurchaseTableViewCell.swift in Sources */,
+				8B6E99BF27E1546A002794D6 /* String+Utilities.swift in Sources */,
 				8BFB257C27DFAD7B007CFE00 /* UPPurchase+CoreDataProperties.swift in Sources */,
 				8B6E99BA27E13203002794D6 /* AboutPurchasesViewController.swift in Sources */,
 				8BFB258527DFAE6E007CFE00 /* BaseAPIService.swift in Sources */,

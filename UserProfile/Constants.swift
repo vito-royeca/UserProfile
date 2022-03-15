@@ -13,6 +13,8 @@ struct Constants {
     static let managedObjectContext = "managedObjectContext"
     static let jsonDateFormat       = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
     static let jsonLocale           = "en_US_POSIX"
+    static let normalDate           = "MMMM d, yyyy"
+    static let phonePattern         = "+# (###) ###-##-##"
 }
 
 enum UPError: LocalizedError {

@@ -55,19 +55,11 @@ public class UPUser: NSManagedObject, Codable {
 // MARK: - Formats
 extension UPUser {
     var phoneNumberFormatted: String? {
-        guard let p = phoneNumber else {
+        guard let phoneNumber = phoneNumber else {
             return nil
         }
 
-        // TODO: fix this
-//        let p2 = String(format: "%@ (%@) %@ %@ %@", p.substringToIndex(p.startIndex.advancedBy(1)),
-//            p.substringWithRange(p.startIndex.advancedBy(1) ... p.startIndex.advancedBy(3)),
-//            p.substringWithRange(p.startIndex.advancedBy(4) ... p.startIndex.advancedBy(6)),
-//            p.substringWithRange(p.startIndex.advancedBy(7) ... p.startIndex.advancedBy(8)),
-//            p.substringWithRange(p.startIndex.advancedBy(9) ... p.startIndex.advancedBy(10))
-//        )
-        
-        return nil
+        return String.format(phone: phoneNumber, with: Constants.phonePattern)
     }
     
     var registrationFormatted: String? {
@@ -75,9 +67,6 @@ extension UPUser {
             return nil
         }
         
-        let formatter = DateFormatter()
-        formatter.dateFormat = "MMMM d, yyyy"
-        
-        return formatter.string(from: registration)
+        return String.format(date: registration, with: Constants.normalDate)
     }
 }

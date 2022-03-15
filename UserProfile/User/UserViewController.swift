@@ -34,12 +34,11 @@ class UserViewController: UIViewController {
         userImage.layer.cornerRadius = userImage.frame.width / 2
         userImage.layer.masksToBounds = true
 
-        personaLabel.text = "Personal".localizedCapitalized
-        userNameLabel.text = "Username".localizedCapitalized
-        fullNameLabel.text = "Full name".localizedCapitalized
-        phoneNumberLabel.text = "Phone number".localizedCapitalized
-        registrationDateLabel.text = "Registration Date".localizedCapitalized
-        
+        personaLabel.text = NSLocalizedString("Personal", comment: "")
+        userNameLabel.text = NSLocalizedString("Username", comment: "")
+        fullNameLabel.text = NSLocalizedString("Full name", comment: "")
+        phoneNumberLabel.text = NSLocalizedString("Phone number", comment: "")
+        registrationDateLabel.text = NSLocalizedString("Registration Date", comment: "")
         viewModelForUIUpdate()
     }
     
@@ -65,7 +64,7 @@ class UserViewController: UIViewController {
             self.nameValue.text = self.viewModel.user.name
             self.userNameValue.text = self.viewModel.user.userName
             self.fullNameValue.text = self.viewModel.user.fullName
-            self.phoneNumberValue.text = self.viewModel.user.phoneNumber
+            self.phoneNumberValue.text = self.viewModel.user.phoneNumberFormatted
             self.registrationDateValue.text = "\(self.viewModel.user.registrationFormatted ?? "")"
             self.activityIndicatorView.stopAnimating()
         }

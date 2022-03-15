@@ -56,7 +56,7 @@ public class UPPurchase: NSManagedObject, Codable {
 // MARK: - Formats
 extension UPPurchase {
     var priceFormatted: String {
-        return String(format: "$%.02f", price)
+        return String.format(usd: price)
     }
     
     var purchaseDateFormatted: String? {
@@ -64,9 +64,6 @@ extension UPPurchase {
             return nil
         }
         
-        let formatter = DateFormatter()
-        formatter.dateFormat = "MMMM d, yyyy"
-        
-        return formatter.string(from: purchaseDate)
+        return String.format(date: purchaseDate, with: Constants.normalDate)
     }
 }
