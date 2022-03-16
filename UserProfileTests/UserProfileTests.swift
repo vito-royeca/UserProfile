@@ -7,6 +7,7 @@
 
 import XCTest
 @testable import UserProfile
+@testable import SDWebImage
 
 class UserProfileTests: XCTestCase {
 
@@ -36,10 +37,36 @@ class UserProfileTests: XCTestCase {
     func testFetchUser() {
         let expectation = XCTestExpectation(description: "testFetchUser")
         
-        APIManager.shared.fetchUser(completion: { result in
+        let service = UserAPIService()
+        
+        service.fetchLocalData(type: UPUser.self, completion: { result in
             switch result {
-            case .success(let user):
-                XCTAssert(user.userName == Constants.defaultUserName)
+            case .success(let users):
+                let user = users.first
+                XCTAssert(user != nil)
+                
+                XCTAssert(user?.userName == Constants.defaultUserName)
+                expectation.fulfill()
+            case .failure(let error):
+                print(error)
+                XCTFail()
+                expectation.fulfill()
+            }
+        })
+        
+        wait(for: [expectation], timeout: 10.0)
+    }
+    
+    func testFetchPurchases() {
+        let expectation = XCTestExpectation(description: "testFetchPurchase")
+        
+        let service = PurchasesAPIService()
+        
+        service.fetchLocalData(type: UPUser.self, completion: { result in
+            switch result {
+            case .success(let purchases):
+                XCTAssert(purchases.count > 0)
+                
                 expectation.fulfill()
             case .failure(let error):
                 print(error)

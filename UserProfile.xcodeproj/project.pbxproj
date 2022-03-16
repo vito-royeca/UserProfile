@@ -17,18 +17,18 @@
 		8B6E99AB27E10268002794D6 /* PurchasesAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E99A927E10268002794D6 /* PurchasesAPIService.swift */; };
 		8B6E99AC27E10268002794D6 /* PurchasesAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E99A927E10268002794D6 /* PurchasesAPIService.swift */; };
 		8B6E99AE27E1027D002794D6 /* PurchasesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E99AD27E1027D002794D6 /* PurchasesViewController.swift */; };
-		8B6E99AF27E1027D002794D6 /* PurchasesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E99AD27E1027D002794D6 /* PurchasesViewController.swift */; };
-		8B6E99B027E1027D002794D6 /* PurchasesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E99AD27E1027D002794D6 /* PurchasesViewController.swift */; };
 		8B6E99B227E1163E002794D6 /* PurchasesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E99B127E1163E002794D6 /* PurchasesDataSource.swift */; };
 		8B6E99B327E1163E002794D6 /* PurchasesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E99B127E1163E002794D6 /* PurchasesDataSource.swift */; };
 		8B6E99B427E1163E002794D6 /* PurchasesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E99B127E1163E002794D6 /* PurchasesDataSource.swift */; };
 		8B6E99B627E12233002794D6 /* PurchaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E99B527E12233002794D6 /* PurchaseTableViewCell.swift */; };
-		8B6E99B727E12233002794D6 /* PurchaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E99B527E12233002794D6 /* PurchaseTableViewCell.swift */; };
-		8B6E99B827E12233002794D6 /* PurchaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E99B527E12233002794D6 /* PurchaseTableViewCell.swift */; };
 		8B6E99BA27E13203002794D6 /* AboutPurchasesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E99B927E13203002794D6 /* AboutPurchasesViewController.swift */; };
 		8B6E99BB27E13203002794D6 /* AboutPurchasesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E99B927E13203002794D6 /* AboutPurchasesViewController.swift */; };
 		8B6E99BC27E13203002794D6 /* AboutPurchasesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E99B927E13203002794D6 /* AboutPurchasesViewController.swift */; };
 		8B6E99BF27E1546A002794D6 /* String+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E99BE27E1546A002794D6 /* String+Utilities.swift */; };
+		8B6E99C027E15A2E002794D6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFB258827DFB41D007CFE00 /* Constants.swift */; };
+		8B6E99C127E15A2F002794D6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFB258827DFB41D007CFE00 /* Constants.swift */; };
+		8B6E99C227E15A4D002794D6 /* String+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E99BE27E1546A002794D6 /* String+Utilities.swift */; };
+		8B6E99C327E15A4E002794D6 /* String+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E99BE27E1546A002794D6 /* String+Utilities.swift */; };
 		8BCDE39627E01EA600C15F59 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 8BCDE39527E01EA600C15F59 /* SDWebImage */; };
 		8BFB253B27DFA057007CFE00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFB253A27DFA057007CFE00 /* AppDelegate.swift */; };
 		8BFB253D27DFA057007CFE00 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFB253C27DFA057007CFE00 /* SceneDelegate.swift */; };
@@ -66,8 +66,6 @@
 		8BFB259427DFCF9E007CFE00 /* UserAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFB259227DFCF9E007CFE00 /* UserAPIService.swift */; };
 		8BFB259527DFCF9E007CFE00 /* UserAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFB259227DFCF9E007CFE00 /* UserAPIService.swift */; };
 		8BFB259727DFD14C007CFE00 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFB259627DFD14C007CFE00 /* UserViewController.swift */; };
-		8BFB259827DFD14C007CFE00 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFB259627DFD14C007CFE00 /* UserViewController.swift */; };
-		8BFB259927DFD14C007CFE00 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFB259627DFD14C007CFE00 /* UserViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -425,20 +423,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B6E99BB27E13203002794D6 /* AboutPurchasesViewController.swift in Sources */,
+				8B6E99C027E15A2E002794D6 /* Constants.swift in Sources */,
 				8BFB258127DFADC2007CFE00 /* CoreDataManager.swift in Sources */,
 				8B5D960A27E043CA002E95C0 /* BaseViewModel.swift in Sources */,
 				8B6E99B327E1163E002794D6 /* PurchasesDataSource.swift in Sources */,
 				8BFB255527DFA058007CFE00 /* UserProfileTests.swift in Sources */,
-				8B6E99B727E12233002794D6 /* PurchaseTableViewCell.swift in Sources */,
+				8B6E99C227E15A4D002794D6 /* String+Utilities.swift in Sources */,
 				8B6E99AB27E10268002794D6 /* PurchasesAPIService.swift in Sources */,
 				8BFB257D27DFAD7B007CFE00 /* UPPurchase+CoreDataProperties.swift in Sources */,
-				8BFB259827DFD14C007CFE00 /* UserViewController.swift in Sources */,
 				8BFB257A27DFAD7B007CFE00 /* UPPurchase+CoreDataClass.swift in Sources */,
 				8BFB257427DFAD7B007CFE00 /* UPUser+CoreDataClass.swift in Sources */,
 				8BFB257727DFAD7B007CFE00 /* UPUser+CoreDataProperties.swift in Sources */,
 				8BFB258627DFAE6E007CFE00 /* BaseAPIService.swift in Sources */,
 				8B6E99A727E10256002794D6 /* PurchasesViewModel.swift in Sources */,
-				8B6E99AF27E1027D002794D6 /* PurchasesViewController.swift in Sources */,
 				8BFB259027DFCF24007CFE00 /* UserViewModel.swift in Sources */,
 				8BFB259427DFCF9E007CFE00 /* UserAPIService.swift in Sources */,
 			);
@@ -449,23 +446,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BFB258727DFAE6E007CFE00 /* BaseAPIService.swift in Sources */,
-				8BFB259927DFD14C007CFE00 /* UserViewController.swift in Sources */,
 				8B6E99A827E10256002794D6 /* PurchasesViewModel.swift in Sources */,
 				8BFB255F27DFA058007CFE00 /* UserProfileUITests.swift in Sources */,
 				8BFB257E27DFAD7B007CFE00 /* UPPurchase+CoreDataProperties.swift in Sources */,
-				8B6E99B827E12233002794D6 /* PurchaseTableViewCell.swift in Sources */,
 				8BFB259127DFCF24007CFE00 /* UserViewModel.swift in Sources */,
 				8B5D960B27E043CA002E95C0 /* BaseViewModel.swift in Sources */,
 				8BFB257827DFAD7B007CFE00 /* UPUser+CoreDataProperties.swift in Sources */,
 				8BFB259527DFCF9E007CFE00 /* UserAPIService.swift in Sources */,
 				8BFB256127DFA058007CFE00 /* UserProfileUITestsLaunchTests.swift in Sources */,
 				8BFB257527DFAD7B007CFE00 /* UPUser+CoreDataClass.swift in Sources */,
+				8B6E99C327E15A4E002794D6 /* String+Utilities.swift in Sources */,
 				8B6E99AC27E10268002794D6 /* PurchasesAPIService.swift in Sources */,
-				8B6E99B027E1027D002794D6 /* PurchasesViewController.swift in Sources */,
 				8B6E99B427E1163E002794D6 /* PurchasesDataSource.swift in Sources */,
 				8B6E99BC27E13203002794D6 /* AboutPurchasesViewController.swift in Sources */,
 				8BFB258227DFADC2007CFE00 /* CoreDataManager.swift in Sources */,
 				8BFB257B27DFAD7B007CFE00 /* UPPurchase+CoreDataClass.swift in Sources */,
+				8B6E99C127E15A2F002794D6 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
