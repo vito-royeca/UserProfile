@@ -93,7 +93,7 @@ class PurchaseTableViewCell: UITableViewCell {
         dateLabel.text = purchaseDate
         priceLabel.text = price
         if isDetailsShown {
-            serialLabel.text = "Serial: \(serial ?? "")".localizedCapitalized
+            serialLabel.text = serial
             descriptionLabel.text = "Description:".localizedCapitalized
             descriptionContentLabel.text = productDescription
         } else {

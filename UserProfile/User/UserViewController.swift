@@ -21,6 +21,7 @@ class UserViewController: UIViewController {
     @IBOutlet weak var phoneNumberLabel: UILabel!
     @IBOutlet weak var phoneNumberValue: UILabel!
     @IBOutlet weak var registrationDateLabel: UILabel!
+    @IBOutlet weak var viewPurchasesButton: UIButton!
     @IBOutlet weak var registrationDateValue: UILabel!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     
@@ -39,6 +40,9 @@ class UserViewController: UIViewController {
         fullNameLabel.text = NSLocalizedString("Full name", comment: "")
         phoneNumberLabel.text = NSLocalizedString("Phone number", comment: "")
         registrationDateLabel.text = NSLocalizedString("Registration Date", comment: "")
+        viewPurchasesButton.layer.cornerRadius = viewPurchasesButton.frame.height / 2
+        viewPurchasesButton.layer.masksToBounds = true
+        
         viewModelForUIUpdate()
     }
     
