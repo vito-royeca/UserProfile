@@ -46,8 +46,8 @@ class BaseAPIService {
             case .failure(let error):
                 completion(.failure(error))
             }
-        }, receiveValue: { _ in
-            CoreDataManager.shared.saveContext()
+        }, receiveValue: { jsonData in
+            CoreDataManager.shared.syncToCoreData(jsonData)
         })
     }
 }

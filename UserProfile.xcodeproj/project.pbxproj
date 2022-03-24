@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B357B7327EC1E2500B348EB /* JSONData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B357B7227EC1E2500B348EB /* JSONData.swift */; };
+		8B357B7427EC1E2500B348EB /* JSONData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B357B7227EC1E2500B348EB /* JSONData.swift */; };
+		8B357B7627EC217B00B348EB /* CoreDataManager+Sync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B357B7527EC217B00B348EB /* CoreDataManager+Sync.swift */; };
+		8B357B7727EC217B00B348EB /* CoreDataManager+Sync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B357B7527EC217B00B348EB /* CoreDataManager+Sync.swift */; };
 		8B5D960927E043CA002E95C0 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5D960827E043CA002E95C0 /* BaseViewModel.swift */; };
 		8B5D960A27E043CA002E95C0 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5D960827E043CA002E95C0 /* BaseViewModel.swift */; };
 		8B5D960B27E043CA002E95C0 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5D960827E043CA002E95C0 /* BaseViewModel.swift */; };
@@ -86,6 +90,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8B357B7227EC1E2500B348EB /* JSONData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONData.swift; sourceTree = "<group>"; };
+		8B357B7527EC217B00B348EB /* CoreDataManager+Sync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataManager+Sync.swift"; sourceTree = "<group>"; };
 		8B5D960827E043CA002E95C0 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		8B6E99A527E10256002794D6 /* PurchasesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasesViewModel.swift; sourceTree = "<group>"; };
 		8B6E99A927E10268002794D6 /* PurchasesAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasesAPIService.swift; sourceTree = "<group>"; };
@@ -150,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				8B6E99BE27E1546A002794D6 /* String+Utilities.swift */,
+				8B357B7227EC1E2500B348EB /* JSONData.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -215,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				8BFB257F27DFADC2007CFE00 /* CoreDataManager.swift */,
+				8B357B7527EC217B00B348EB /* CoreDataManager+Sync.swift */,
 				8BFB256F27DFAD7B007CFE00 /* UPUser+CoreDataClass.swift */,
 				8BFB257027DFAD7B007CFE00 /* UPUser+CoreDataProperties.swift */,
 				8BFB257127DFAD7B007CFE00 /* UPPurchase+CoreDataClass.swift */,
@@ -393,6 +401,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B357B7327EC1E2500B348EB /* JSONData.swift in Sources */,
 				8BFB254527DFA057007CFE00 /* UserProfile.xcdatamodeld in Sources */,
 				8BFB258F27DFCF24007CFE00 /* UserViewModel.swift in Sources */,
 				8BFB258927DFB41D007CFE00 /* Constants.swift in Sources */,
@@ -403,6 +412,7 @@
 				8B6E99BA27E13203002794D6 /* AboutPurchasesViewController.swift in Sources */,
 				8BFB258527DFAE6E007CFE00 /* BaseAPIService.swift in Sources */,
 				8BFB257927DFAD7B007CFE00 /* UPPurchase+CoreDataClass.swift in Sources */,
+				8B357B7627EC217B00B348EB /* CoreDataManager+Sync.swift in Sources */,
 				8BFB259327DFCF9E007CFE00 /* UserAPIService.swift in Sources */,
 				8BFB259727DFD14C007CFE00 /* UserViewController.swift in Sources */,
 				8BFB253F27DFA057007CFE00 /* ViewController.swift in Sources */,
@@ -451,6 +461,7 @@
 				8BFB257E27DFAD7B007CFE00 /* UPPurchase+CoreDataProperties.swift in Sources */,
 				8BFB259127DFCF24007CFE00 /* UserViewModel.swift in Sources */,
 				8B5D960B27E043CA002E95C0 /* BaseViewModel.swift in Sources */,
+				8B357B7727EC217B00B348EB /* CoreDataManager+Sync.swift in Sources */,
 				8BFB257827DFAD7B007CFE00 /* UPUser+CoreDataProperties.swift in Sources */,
 				8BFB259527DFCF9E007CFE00 /* UserAPIService.swift in Sources */,
 				8BFB256127DFA058007CFE00 /* UserProfileUITestsLaunchTests.swift in Sources */,
@@ -462,6 +473,7 @@
 				8BFB258227DFADC2007CFE00 /* CoreDataManager.swift in Sources */,
 				8BFB257B27DFAD7B007CFE00 /* UPPurchase+CoreDataClass.swift in Sources */,
 				8B6E99C127E15A2F002794D6 /* Constants.swift in Sources */,
+				8B357B7427EC1E2500B348EB /* JSONData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

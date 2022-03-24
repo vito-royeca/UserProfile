@@ -29,7 +29,7 @@ class UserAPIService: BaseAPIService {
         } else {
             let urlString = "https://idme-takehome.proxy.beeceptor.com/profile/U13023932"
             
-            fetchRemoteData(type: UPUser.self, urlString: urlString, completion: { result in
+            fetchRemoteData(type: UserJSON.self, urlString: urlString, completion: { result in
                 switch result {
                 case .success:
                     if let users = CoreDataManager.shared.find(type,

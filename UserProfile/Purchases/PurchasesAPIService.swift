@@ -30,7 +30,7 @@ class PurchasesAPIService: BaseAPIService {
         } else {
             let urlString = "https://idme-takehome.proxy.beeceptor.com/purchases/U13023932?page=1"
             
-            fetchRemoteData(type: [UPPurchase].self, urlString: urlString, completion: { result in
+            fetchRemoteData(type: [PurchaseJSON].self, urlString: urlString, completion: { result in
                 switch result {
                 case .success:
                     if let user = CoreDataManager.shared.find(UPUser.self,
