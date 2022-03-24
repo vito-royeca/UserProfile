@@ -23,7 +23,7 @@ class UserViewModel : BaseViewModel {
                 
             }
         case .failure(let error):
-            print(error)
+            sendErrorToController(error)
         }
     }
 }

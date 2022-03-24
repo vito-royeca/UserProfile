@@ -52,9 +52,12 @@ class UserViewController: UIViewController {
     }
     
     func viewModelForUIUpdate() {
-        self.viewModel =  UserViewModel(service: UserAPIService())
-        self.viewModel.bindViewModelToController = {
+        viewModel =  UserViewModel(service: UserAPIService())
+        viewModel.bindViewModelToController = {
             self.updateDataSource()
+        }
+        viewModel.sendErrorToController = { error in
+            self.handle(error: error)
         }
     }
     
@@ -74,4 +77,21 @@ class UserViewController: UIViewController {
         }
     }
     
+    func handle(error: Error) {
+        print(error)
+        
+        let alertController = UIAlertController(title: "Oh no!",
+                                                message: "An error has occured. Do you want to try again?",
+                                                preferredStyle: .alert)
+        
+        alertController.addAction(UIAlertAction(title: "Yes", style: .default, handler: { _ in
+            self.viewModel.fetchData(type: UPUser.self)
+        }))
+        alertController.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+        
+        DispatchQueue.main.async {
+            self.activityIndicatorView.stopAnimating()
+            self.present(alertController, animated: true)
+        }
+    }
 }

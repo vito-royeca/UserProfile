@@ -33,9 +33,12 @@ class PurchasesViewController: UIViewController {
     }
     
     func viewModelForUIUpdate() {
-        self.viewModel =  PurchasesViewModel(service: PurchasesAPIService())
-        self.viewModel.bindViewModelToController = {
+        viewModel =  PurchasesViewModel(service: PurchasesAPIService())
+        viewModel.bindViewModelToController = {
             self.updateDataSource()
+        }
+        viewModel.sendErrorToController = { error in
+            self.handle(error: error)
         }
     }
     
@@ -58,16 +61,23 @@ class PurchasesViewController: UIViewController {
         }
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func handle(error: Error) {
+        print(error)
+        
+        let alertController = UIAlertController(title: "Oh no!",
+                                                message: "An error has occured. Do you want to try again?",
+                                                preferredStyle: .alert)
+        
+        alertController.addAction(UIAlertAction(title: "Yes", style: .default, handler: { _ in
+            self.viewModel.fetchData(type: UPPurchase.self)
+        }))
+        alertController.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+        
+        DispatchQueue.main.async {
+            self.activityIndicatorView.stopAnimating()
+            self.present(alertController, animated: true)
+        }
     }
-    */
-    
 }
 
 extension PurchasesViewController: UITableViewDelegate {

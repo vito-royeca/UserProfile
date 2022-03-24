@@ -11,6 +11,7 @@ class BaseViewModel : NSObject {
     
     private var service : BaseAPIService!
     var bindViewModelToController : (() -> ()) = {}
+    var sendErrorToController : ((Error) -> ()) = { _ in }
     
     init(service: BaseAPIService) {
         super.init()
