@@ -98,4 +98,6 @@ extension PurchasesViewController: UITableViewDelegate {
             cell.isDetailsShown = selectedIndexPath != indexPath
         }
     }
+    
+    
 }

@@ -92,6 +92,7 @@
 /* Begin PBXFileReference section */
 		8B357B7227EC1E2500B348EB /* JSONData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONData.swift; sourceTree = "<group>"; };
 		8B357B7527EC217B00B348EB /* CoreDataManager+Sync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataManager+Sync.swift"; sourceTree = "<group>"; };
+		8B3F768D27EE3E2700059C45 /* UserProfile 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "UserProfile 2.xcdatamodel"; sourceTree = "<group>"; };
 		8B5D960827E043CA002E95C0 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		8B6E99A527E10256002794D6 /* PurchasesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasesViewModel.swift; sourceTree = "<group>"; };
 		8B6E99A927E10268002794D6 /* PurchasesAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasesAPIService.swift; sourceTree = "<group>"; };
@@ -820,9 +821,10 @@
 		8BFB254327DFA057007CFE00 /* UserProfile.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				8B3F768D27EE3E2700059C45 /* UserProfile 2.xcdatamodel */,
 				8BFB254427DFA057007CFE00 /* UserProfile.xcdatamodel */,
 			);
-			currentVersion = 8BFB254427DFA057007CFE00 /* UserProfile.xcdatamodel */;
+			currentVersion = 8B3F768D27EE3E2700059C45 /* UserProfile 2.xcdatamodel */;
 			path = UserProfile.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

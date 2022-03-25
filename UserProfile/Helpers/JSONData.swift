@@ -36,9 +36,27 @@ struct PurchaseJSON: Codable {
     }
     
     let image: String?
-    let  purchaseDate: Date
+    let  purchaseDate: Date?
     let itemName: String
     let price: String
+    let serial: String
+    let productDescription: String
+}
+
+struct RefundJSON: Codable {
+    enum CodingKeys: String, CodingKey {
+        case image
+        case refundDate = "refund_date"
+        case itemName = "item_name"
+        case refundAmount = "refund_amt"
+        case serial
+        case productDescription = "description"
+    }
+    
+    let image: String?
+    let refundDate: Date?
+    let itemName: String
+    let refundAmount: String
     let serial: String
     let productDescription: String
 }

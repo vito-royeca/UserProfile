@@ -14,6 +14,8 @@ extension CoreDataManager {
             sync(user)
         } else if let purchases = jsonData as? [PurchaseJSON] {
             sync(purchases)
+        } else if let refunds = jsonData as? [RefundJSON] {
+            sync(refunds)
         }
     }
     
@@ -48,6 +50,28 @@ extension CoreDataManager {
         saveContext()
     }
     
+    func sync(_ refunds: [RefundJSON]) {
+        let predicate = NSPredicate(format: "userName = %@", Constants.defaultUserName)
+
+        guard let users = find(UPUser.self,
+                               properties: nil,
+                               predicate: predicate,
+                               sortDescriptors: nil,
+                               createIfNotFound: false),
+              let user = users.first else {
+            return
+        }
+
+        let context = persistentContainer.viewContext
+
+        for refund in refunds {
+            if let newRefund = self.refund(from: refund, context: context, type: UPPurchase.self) {
+                newRefund.user = user
+            }
+        }
+        saveContext()
+    }
+    
     // MARK: - User
     func user<T: NSManagedObject>(from user: UserJSON, context: NSManagedObjectContext, type: T.Type) -> T? {
         var props = [String: Any]()
@@ -74,14 +98,39 @@ extension CoreDataManager {
         var props = [String: Any]()
 
         props["image"] = purchase.image
-        props["purchaseDate"] = purchase.purchaseDate
+        if let purchaseDate = purchase.purchaseDate {
+            props["transactionDate"] = purchaseDate
+        }
         props["itemName"] = purchase.itemName
-        props["price"] = Double(purchase.price) ?? 0
+        props["transactionAmount"] = Double(purchase.price) ?? 0
         props["serial"] = purchase.serial
         props["productDescription"] = purchase.productDescription
         props["lastUpdate"] = Date()
 
         let predicate = NSPredicate(format: "serial = %@", purchase.serial)
+
+        return find(type,
+                    properties: props,
+                    predicate: predicate,
+                    sortDescriptors: nil,
+                    createIfNotFound: true)?.first
+    }
+    
+    // MARK: - Refund
+    func refund<T: NSManagedObject>(from refund: RefundJSON, context: NSManagedObjectContext, type: T.Type) -> T? {
+        var props = [String: Any]()
+
+        props["image"] = refund.image
+        if let refundDate = refund.refundDate {
+            props["transactionDate"] = refundDate
+        }
+        props["itemName"] = refund.itemName
+        props["transactionAmount"] = Double(refund.refundAmount) ?? 0
+        props["serial"] = refund.serial
+        props["productDescription"] = refund.productDescription
+        props["lastUpdate"] = Date()
+
+        let predicate = NSPredicate(format: "serial = %@", refund.serial)
 
         return find(type,
                     properties: props,

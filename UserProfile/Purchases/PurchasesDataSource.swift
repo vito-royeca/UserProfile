@@ -8,29 +8,52 @@
 import Foundation
 import UIKit
 
-class PurchasesTableViewDataSource<CELL : UITableViewCell,T> : NSObject, UITableViewDataSource {
+class PurchasesTableViewDataSource<CELL: UITableViewCell, T> : NSObject, UITableViewDataSource {
     
     private var cellIdentifier : String!
-    private var items : [T]!
+    private var items : [[String: TransactionSection]]!
     var configureCell : (CELL, T) -> () = {_,_ in }
     
     
-    init(cellIdentifier : String, items : [T], configureCell : @escaping (CELL, T) -> ()) {
+    init(cellIdentifier : String, items : [[String: TransactionSection]], configureCell : @escaping (CELL, T) -> ()) {
         self.cellIdentifier = cellIdentifier
         self.items =  items
         self.configureCell = configureCell
     }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return items.count
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        items.count
+        let purchaseSection = items[section]
+        
+        for (_,v) in purchaseSection {
+            return v.transactions.count
+        }
+        
+        return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! CELL
+        let purchaseSection = items[indexPath.section]
         
-         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! CELL
+        for (_,v) in purchaseSection {
+            let item = v.transactions[indexPath.row]
+            self.configureCell(cell, item as! T)
+        }
         
-        let item = self.items[indexPath.row]
-        self.configureCell(cell, item)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        let purchaseSection = items[section]
+        
+        for (k,_) in purchaseSection {
+            return k
+        }
+        
+        return nil
     }
 }

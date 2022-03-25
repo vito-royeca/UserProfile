@@ -17,11 +17,11 @@ public class UPPurchase: NSManagedObject {
 // MARK: - Formats
 extension UPPurchase {
     var priceFormatted: String {
-        return String.format(usd: price)
+        return String.format(usd: transactionAmount)
     }
     
     var purchaseDateFormatted: String? {
-        guard let purchaseDate = purchaseDate else {
+        guard let purchaseDate = transactionDate else {
             return nil
         }
         

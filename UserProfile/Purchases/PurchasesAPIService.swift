@@ -28,27 +28,40 @@ class PurchasesAPIService: BaseAPIService {
             completion(.success(purchases))
             
         } else {
-            let urlString = "https://idme-takehome.proxy.beeceptor.com/purchases/U13023932?page=1"
+            let urlString  = "https://idme-takehome.proxy.beeceptor.com/purchases/U13023932?page=1"
+            let urlString2 = "https://idme-takehome.proxy.beeceptor.com/refunds/U13023932"
+            
+            let success = {
+                if let user = CoreDataManager.shared.find(UPUser.self,
+                                                          properties: nil,
+                                                          predicate: NSPredicate(format: "userName = %@", Constants.defaultUserName),
+                                                          sortDescriptors: nil,
+                                                          createIfNotFound: false)?.first,
+                    let purchases = CoreDataManager.shared.find(type,
+                                                                properties: ["user": user,
+                                                                             "lastUpdate": Date()],
+                                                                predicate: nil,
+                                                                sortDescriptors: sortDescriptors,
+                                                                createIfNotFound: false) {
+                    
+                    completion(.success(purchases))
+                } else {
+                    completion(.failure(UPError.dataNotFound))
+                }
+            }
             
             fetchRemoteData(type: [PurchaseJSON].self, urlString: urlString, completion: { result in
                 switch result {
                 case .success:
-                    if let user = CoreDataManager.shared.find(UPUser.self,
-                                                              properties: nil,
-                                                              predicate: NSPredicate(format: "userName = %@", Constants.defaultUserName),
-                                                              sortDescriptors: nil,
-                                                              createIfNotFound: false)?.first,
-                        let purchases = CoreDataManager.shared.find(type,
-                                                                    properties: ["user": user,
-                                                                                 "lastUpdate": Date()],
-                                                                   predicate: nil,
-                                                                   sortDescriptors: sortDescriptors,
-                                                                   createIfNotFound: false) {
-                        
-                        completion(.success(purchases))
-                    } else {
-                        completion(.failure(UPError.dataNotFound))
-                    }
+                    
+                    self.fetchRemoteData(type: [RefundJSON].self, urlString: urlString2, completion: { result in
+                        switch result {
+                        case .success:
+                            success()
+                        case .failure(let error):
+                            completion(.failure(error))
+                        }
+                    })
                 case .failure(let error):
                     completion(.failure(error))
                 }
